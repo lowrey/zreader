@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Z Reader</title>
+    <link href="lib/fonts/DroidSansMono.css" rel="stylesheet" />
+    <link href="lib/fonts/Cousine.css" rel="stylesheet" />
+    <link href="lib/fonts/PressStart.css" rel="stylesheet" />
+    <link href="lib/normalize.css" rel="stylesheet" />
+    <link href="lib/animate.css" rel="stylesheet" />
+    <link href="lib/style.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="favicon.gif" rel="shortcut icon" />
+</head>
+<body>
+    <div id="contentdiv">
+        <textarea id="content" spellcheck="true"></textarea>
+    </div>
+    <pre id="print"></pre>
+    <div id="buttondiv">
+        <button type="button" id="readbutton" class="buttons"
+            onclick="zread.prepare($('#content').val());zread.readText();">Read</button> 
+        <select id="fontselect"> 
+            <option value="Cousine">Cousine</option>
+            <option value="Press Start 2P">Press Start 2P</option>
+            <option value="Droid Sans Mono">Droid Sans Mono</option>
+            <option value="Courier New">Courier New</option>
+        </select>
+        <input type="range" name="speed" id="speed" min="1" max="100" value="20">
+    </div>
+    <div class="icon"></div>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.lettering.js"></script>
+    <script src="lib/jquery.textillate.js"></script>
+    <script src="lib/underscore.min.js"></script>
+    <script src="lib/underscore.string.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
